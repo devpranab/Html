@@ -1,0 +1,23 @@
+// body{
+//     padding: 50px;
+// }
+
+@import "./node_modules/bootstrap/scss/_functions";
+@import "./node_modules/bootstrap/scss/_variables";
+@import "./node_modules/bootstrap/scss/_utilities";
+@import "./node_modules/bootstrap/scss/_maps";
+
+$utilities: (
+    "color": (
+        property: color,
+        class: PranColor,
+        state: hover,
+        values: (
+            red: red,
+            green: green,
+            yellow: yellow
+        )
+    )
+);
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";

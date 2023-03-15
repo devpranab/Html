@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap css link -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"/>
+
+    <style>
+        .div1{
+        background-color: lightslategray;
+        padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <!-- 
+        Clearfix
+        Color & background
+     -->
+   <div class="container m-4">
+    <div class="bg-info clearfix">
+      <div class="btn btn-secondary float-start">button</div>
+      <div class="btn btn-secondary float-end">button</div>
+     </div>
+   </div>
+
+     <!-- Auto margins
+    mr-auto
+    ms-auto
+    -->
+    <div class="d-flex div1 mb-3">
+        <div class="p-2">Flex item</div>
+        <div class="p-2">Flex item</div>
+        <div class="p-2">Flex item</div>
+      </div>
+      
+      <div class="d-flex div1 mb-3">
+        <div class="me-auto p-2">Flex item</div>
+        <div class="p-2">Flex item</div>
+        <div class="p-2">Flex item</div>
+      </div>
+      
+      <div class="d-flex div1 mb-3">
+        <div class="p-2">Flex item</div>
+        <div class="p-2">Flex item</div>
+        <div class="ms-auto p-2">Flex item</div>
+      </div>
+
+      <!-- Position
+      .fixed-top/.fixed-bottom
+      .sticky-top/responsive:
+      .sticky-sm-top .sticky-md-top .sticky-lg-top
+      -->
+      <!-- <div class="fixed-top">fixed-top</div>
+      <div class="fixed-bottom">fixed-bottom</div>
+      <div class="sticky-top">sticky-top</div> -->
+
+      <!-- Responsive sticky top -->
+<!-- <div class="sticky-sm-top bg-warning">Stick to the top on viewports sized MD (small) or wider</div>
+<div class="sticky-md-top bg-danger">Stick to the top on viewports sized MD (medium) or wider</div>
+<div class="sticky-md-bottom bg-info">Stick to the bottom on viewports sized SM (medium) or wider</div> -->
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolor suscipit officia voluptatum quae expedita sequi asperiores doloribus, non ipsam nisi error omnis, accusamus a neque, veniam labore! Incidunt suscipit repellat nemo. Omnis aut quas, officia minima obcaecati modi. Soluta repellat eligendi optio illo sint eius, ullam ab. Voluptatum, repudiandae?</p>
+
+<!-- Stacks
+vertical stack: vstack   gap-2/3/4
+horizontal stack: hstack
+-->
+<div class="container">
+  <div class="vstack gap-3">
+    <div class="bg-light border">First item</div>
+    <div class="bg-light border">Second item</div>
+    <div class="bg-light border">Third item</div>
+  </div>
+<br>
+  <div class="hstack gap-3">
+    <div class="bg-light border">First item</div>
+    <div class="bg-light border">Second item</div>
+    <div class="bg-light border">Third item</div>
+  </div>
+ <br>
+  <!--real example using stack helpers  -->
+  <div class="vstack gap-2 col-md-5 mx-auto">
+    <button type="button" class="btn btn-secondary">Save changes</button>
+    <button type="button" class="btn btn-outline-secondary">Cancel</button>
+  </div>
+ <br>
+ <div class="hstack gap-3">
+  <div class="bg-light border">First item</div>
+  <div class="bg-light border ms-auto">Second item</div>
+  <div class="vr"></div>
+  <div class="bg-light border">Third item</div>
+</div>
+<br>
+<div class="hstack gap-3">
+  <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
+  <button type="button" class="btn btn-secondary">Submit</button>
+  <div class="vr"></div>
+  <button type="button" class="btn btn-outline-danger">Reset</button>
+</div>
+</div>
+
+   <!-- Colored link
+  .link-primary .link-success .link-danger link-danger .link-info
+  -->
+  <div class="container m-4">
+  <a href="#" class="link-primary">primary link</a>
+  <a href="#" class="link-success">success link</a>
+  <a href="#" class="link-danger">danger link</a>
+  <a href="#" class="link-info">info link</a>
+  </div>
+
+    <!-- Ratio(image/video as ratio)
+    .ratio
+    .ratio-1x1/4x3/16x9/21x9 (big to small size)
+
+    Custom ratios:
+    -->
+    <div class="container m-4">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/Mus_vwhTCq0" title="YouTube video player"></iframe>
+      </div>
+    </div>
+    <div class="container m-4">
+      <div class="ratio ratio-4x3">
+        <iframe src="https://www.youtube.com/embed/Mus_vwhTCq0" title="YouTube video player"></iframe>
+      </div>
+    </div>
+    <div class="container m-4">
+      <div class="ratio ratio-1x1">
+        <iframe src="https://www.youtube.com/embed/Mus_vwhTCq0" title="YouTube video player"></iframe>
+      </div>
+    </div>
+
+      <!-- text-truncate(cut the text)
+         .text-truncate(text length will increase as device size)
+      -->
+    <!-- Block level -->
+    <div class="row">
+    <div class="col-2 text-truncate">
+      This text is quite long, and will be truncated once displayed.
+    </div>
+   </div>       
+    <!-- Inline level -->
+    <span class="d-inline-block text-truncate" style="max-width: 150px;">
+    This text is quite long, and will be truncated once displayed.
+    </span>
+
+    <!-- Visually hidden
+    .visually-hidden
+    .visually-hidden-focusable
+    -->
+    <div class="container m-4">
+<h2 class="visually-hidden">Title for screen readers</h2>
+<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+<div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+    </div>
+
+<!-- link
+.stretched-link
+if you click anywhere of full card, it will be visit that link url
+-->
+<div class="container m-4">
+  <div class="card" style="width: 18rem;">
+    <img src="img/img1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card with stretched link</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="https://getbootstrap.com/docs/5.2/helpers/stretched-link/" class="btn btn-primary stretched-link">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
